@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NorthAI</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      background: #0e1117;
+      color: #e6edf3;
+      text-align: center;
+      padding: 40px;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #58a6ff;
+      margin-bottom: 20px;
+    }
+
+    pre {
+      background: #161b22;
+      padding: 15px;
+      border-radius: 10px;
+      text-align: left;
+      overflow-x: auto;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    code {
+      color: #d2a8ff;
+    }
+
+    button {
+      margin-top: 10px;
+      background: #238636;
+      border: none;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+
+    button:hover {
+      background: #2ea043;
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 20px;
+      }
+      pre {
+        font-size: 0.9em;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>NorthAI</h1>
+  <pre><code id="python-code">print("Hello from NorthAI!")</code></pre>
+  <button onclick="copyCode()">Copia codice</button>
+
+  <script>
+    function copyCode() {
+      const code = document.getElementById("python-code").innerText;
+      navigator.clipboard.writeText(code);
+      alert("Codice copiato!");
+    }
+  </script>
+</body>
+</html>
